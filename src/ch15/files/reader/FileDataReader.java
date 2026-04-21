@@ -20,12 +20,13 @@ public class FileDataReader {
     public static int wordCounter(Path path){
         try{
             String dataFromFile = Files.readString(path);
-            String[] array = dataFromFile.split("[^a-zA-Z0-9]");
+            String[] array = dataFromFile.split("[^a-zA-Z0-9-']");
             return array.length;
         }catch (IOException e){
             System.err.println(e.getMessage());
             e.printStackTrace();
         }
+
         return 0;
     }
 

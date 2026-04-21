@@ -121,10 +121,10 @@ class FileDataWriterTest {
     @Test
     void testToReadFile_CountNumberOfWordsInFile(){
         try{
-            String fileLocation = "/Users/folajimi/Documents/bigDawgz/src/ch15/files/output/numbers.txt";
+            String fileLocation = "/Users/folajimi/Downloads/generated_43500_words.txt";
             Path path = Paths.get(fileLocation);
             int numberOfWords = FileDataReader.wordCounter(path);
-            assertEquals(5, numberOfWords);
+            assertEquals(43500, numberOfWords);
         } catch (Exception e){
             e.printStackTrace();
         }
