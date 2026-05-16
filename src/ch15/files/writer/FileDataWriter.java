@@ -1,5 +1,7 @@
 package ch15.files.writer;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,5 +16,13 @@ public class FileDataWriter {
             System.err.println(e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public static void writeDataToFile(String text, String fileLocation){
+       try(FileOutputStream outputStream = new FileOutputStream(fileLocation);){
+
+       } catch (IOException e){
+           e.printStackTrace();
+       }
     }
 }
